@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D09C9723AA04D2E61C64086 /* libPods-BieYang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E984371E22131C987CE0AE2 /* libPods-BieYang.a */; };
+		99EFBB601F7A681A00D43601 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB5F1F7A681A00D43601 /* AppDelegate.m */; };
+		99EFBB631F7A681A00D43601 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB621F7A681A00D43601 /* ViewController.m */; };
+		99EFBB661F7A681A00D43601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EFBB641F7A681A00D43601 /* Main.storyboard */; };
+		99EFBB681F7A681A00D43601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EFBB671F7A681A00D43601 /* Assets.xcassets */; };
+		99EFBB6B1F7A681A00D43601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EFBB691F7A681A00D43601 /* LaunchScreen.storyboard */; };
+		99EFBB6E1F7A681A00D43601 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB6D1F7A681A00D43601 /* main.m */; };
+		99EFBB771F7A7BB300D43601 /* BYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB751F7A7BB300D43601 /* BYTableViewCell.m */; };
+		99EFBB781F7A7BB300D43601 /* BYTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EFBB761F7A7BB300D43601 /* BYTableViewCell.xib */; };
+		99EFBB7B1F7A800D00D43601 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB7A1F7A800D00D43601 /* ArticleModel.m */; };
+		99EFBB7F1F7A802400D43601 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB7E1F7A802400D43601 /* FeedModel.m */; };
+		99EFBB821F7A803900D43601 /* ReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB811F7A803900D43601 /* ReplyModel.m */; };
+		99EFBB891F7AA21300D43601 /* BYNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EFBB881F7AA21300D43601 /* BYNetWorkManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E984371E22131C987CE0AE2 /* libPods-BieYang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BieYang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99EFBB5B1F7A681A00D43601 /* BieYang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BieYang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99EFBB5E1F7A681A00D43601 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		99EFBB5F1F7A681A00D43601 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		99EFBB611F7A681A00D43601 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		99EFBB621F7A681A00D43601 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		99EFBB651F7A681A00D43601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99EFBB671F7A681A00D43601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99EFBB6A1F7A681A00D43601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99EFBB6C1F7A681A00D43601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99EFBB6D1F7A681A00D43601 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99EFBB741F7A7BB300D43601 /* BYTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYTableViewCell.h; sourceTree = "<group>"; };
+		99EFBB751F7A7BB300D43601 /* BYTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYTableViewCell.m; sourceTree = "<group>"; };
+		99EFBB761F7A7BB300D43601 /* BYTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYTableViewCell.xib; sourceTree = "<group>"; };
+		99EFBB791F7A800D00D43601 /* ArticleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		99EFBB7A1F7A800D00D43601 /* ArticleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
+		99EFBB7D1F7A802400D43601 /* FeedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedModel.h; sourceTree = "<group>"; };
+		99EFBB7E1F7A802400D43601 /* FeedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedModel.m; sourceTree = "<group>"; };
+		99EFBB801F7A803900D43601 /* ReplyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplyModel.h; sourceTree = "<group>"; };
+		99EFBB811F7A803900D43601 /* ReplyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplyModel.m; sourceTree = "<group>"; };
+		99EFBB871F7AA21300D43601 /* BYNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYNetWorkManager.h; sourceTree = "<group>"; };
+		99EFBB881F7AA21300D43601 /* BYNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYNetWorkManager.m; sourceTree = "<group>"; };
+		A635CA819DEA5ECD4685C61C /* Pods-BieYang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BieYang.release.xcconfig"; path = "Pods/Target Support Files/Pods-BieYang/Pods-BieYang.release.xcconfig"; sourceTree = "<group>"; };
+		F893E2DC17BEB809D4969ACC /* Pods-BieYang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BieYang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BieYang/Pods-BieYang.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99EFBB581F7A681A00D43601 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D09C9723AA04D2E61C64086 /* libPods-BieYang.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EF3B88933AF571E1738D38A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E984371E22131C987CE0AE2 /* libPods-BieYang.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99EFBB521F7A681A00D43601 = {
+			isa = PBXGroup;
+			children = (
+				99EFBB5D1F7A681A00D43601 /* BieYang */,
+				99EFBB5C1F7A681A00D43601 /* Products */,
+				FB9B8EC055C99C3138A5F63A /* Pods */,
+				4EF3B88933AF571E1738D38A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		99EFBB5C1F7A681A00D43601 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB5B1F7A681A00D43601 /* BieYang.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99EFBB5D1F7A681A00D43601 /* BieYang */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB861F7AA1C700D43601 /* Network */,
+				99EFBB841F7A8D2C00D43601 /* View */,
+				99EFBB831F7A8D0E00D43601 /* Main */,
+				99EFBB7C1F7A801100D43601 /* Model */,
+				99EFBB641F7A681A00D43601 /* Main.storyboard */,
+				99EFBB671F7A681A00D43601 /* Assets.xcassets */,
+				99EFBB6C1F7A681A00D43601 /* Info.plist */,
+			);
+			path = BieYang;
+			sourceTree = "<group>";
+		};
+		99EFBB7C1F7A801100D43601 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB791F7A800D00D43601 /* ArticleModel.h */,
+				99EFBB7A1F7A800D00D43601 /* ArticleModel.m */,
+				99EFBB7D1F7A802400D43601 /* FeedModel.h */,
+				99EFBB7E1F7A802400D43601 /* FeedModel.m */,
+				99EFBB801F7A803900D43601 /* ReplyModel.h */,
+				99EFBB811F7A803900D43601 /* ReplyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99EFBB831F7A8D0E00D43601 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB5E1F7A681A00D43601 /* AppDelegate.h */,
+				99EFBB5F1F7A681A00D43601 /* AppDelegate.m */,
+				99EFBB6D1F7A681A00D43601 /* main.m */,
+				99EFBB691F7A681A00D43601 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		99EFBB841F7A8D2C00D43601 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB611F7A681A00D43601 /* ViewController.h */,
+				99EFBB621F7A681A00D43601 /* ViewController.m */,
+				99EFBB851F7A8D3500D43601 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99EFBB851F7A8D3500D43601 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB741F7A7BB300D43601 /* BYTableViewCell.h */,
+				99EFBB751F7A7BB300D43601 /* BYTableViewCell.m */,
+				99EFBB761F7A7BB300D43601 /* BYTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		99EFBB861F7AA1C700D43601 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				99EFBB871F7AA21300D43601 /* BYNetWorkManager.h */,
+				99EFBB881F7AA21300D43601 /* BYNetWorkManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FB9B8EC055C99C3138A5F63A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F893E2DC17BEB809D4969ACC /* Pods-BieYang.debug.xcconfig */,
+				A635CA819DEA5ECD4685C61C /* Pods-BieYang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99EFBB5A1F7A681A00D43601 /* BieYang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99EFBB711F7A681A00D43601 /* Build configuration list for PBXNativeTarget "BieYang" */;
+			buildPhases = (
+				EBDEC0A1515C0A7B1A3F4FF0 /* [CP] Check Pods Manifest.lock */,
+				99EFBB571F7A681A00D43601 /* Sources */,
+				99EFBB581F7A681A00D43601 /* Frameworks */,
+				99EFBB591F7A681A00D43601 /* Resources */,
+				D6DEEAED07B3A4E8098D6876 /* [CP] Embed Pods Frameworks */,
+				5657D7FBA44F6A58A4366B2C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BieYang;
+			productName = BieYang;
+			productReference = 99EFBB5B1F7A681A00D43601 /* BieYang.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99EFBB531F7A681A00D43601 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = com.ZHY;
+				TargetAttributes = {
+					99EFBB5A1F7A681A00D43601 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 99EFBB561F7A681A00D43601 /* Build configuration list for PBXProject "BieYang" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99EFBB521F7A681A00D43601;
+			productRefGroup = 99EFBB5C1F7A681A00D43601 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99EFBB5A1F7A681A00D43601 /* BieYang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99EFBB591F7A681A00D43601 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EFBB6B1F7A681A00D43601 /* LaunchScreen.storyboard in Resources */,
+				99EFBB681F7A681A00D43601 /* Assets.xcassets in Resources */,
+				99EFBB781F7A7BB300D43601 /* BYTableViewCell.xib in Resources */,
+				99EFBB661F7A681A00D43601 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5657D7FBA44F6A58A4366B2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BieYang/Pods-BieYang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6DEEAED07B3A4E8098D6876 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BieYang/Pods-BieYang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBDEC0A1515C0A7B1A3F4FF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99EFBB571F7A681A00D43601 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EFBB631F7A681A00D43601 /* ViewController.m in Sources */,
+				99EFBB7B1F7A800D00D43601 /* ArticleModel.m in Sources */,
+				99EFBB6E1F7A681A00D43601 /* main.m in Sources */,
+				99EFBB7F1F7A802400D43601 /* FeedModel.m in Sources */,
+				99EFBB771F7A7BB300D43601 /* BYTableViewCell.m in Sources */,
+				99EFBB891F7AA21300D43601 /* BYNetWorkManager.m in Sources */,
+				99EFBB821F7A803900D43601 /* ReplyModel.m in Sources */,
+				99EFBB601F7A681A00D43601 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		99EFBB641F7A681A00D43601 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99EFBB651F7A681A00D43601 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99EFBB691F7A681A00D43601 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99EFBB6A1F7A681A00D43601 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99EFBB6F1F7A681A00D43601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		99EFBB701F7A681A00D43601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99EFBB721F7A681A00D43601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F893E2DC17BEB809D4969ACC /* Pods-BieYang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94632MYD4N;
+				INFOPLIST_FILE = BieYang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZHY.BieYang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99EFBB731F7A681A00D43601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A635CA819DEA5ECD4685C61C /* Pods-BieYang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94632MYD4N;
+				INFOPLIST_FILE = BieYang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZHY.BieYang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99EFBB561F7A681A00D43601 /* Build configuration list for PBXProject "BieYang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EFBB6F1F7A681A00D43601 /* Debug */,
+				99EFBB701F7A681A00D43601 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99EFBB711F7A681A00D43601 /* Build configuration list for PBXNativeTarget "BieYang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EFBB721F7A681A00D43601 /* Debug */,
+				99EFBB731F7A681A00D43601 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99EFBB531F7A681A00D43601 /* Project object */;
+}
