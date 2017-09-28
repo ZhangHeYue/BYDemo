@@ -33,13 +33,18 @@ static NSString *cellIdentifier = @"BYTableViewCell";
 - (void)fetchData {
     __weak __typeof(self) weakself= self;
     [BYNetWorkManager fetchArticelFrom:_start perCount:perCount completionHandler:^(NSArray<FeedModel*> *models) {
-        __weak __typeof(weakself) strongself= weakself;
+        __strong __typeof(weakself) strongself= weakself;
         [strongself addNewData:models];
     }];
 }
 
 - (void)addNewData: (NSArray<FeedModel*> *) data {
     [_articleDataArray addObjectsFromArray:data];
+    [_articleDataArray sortUsingComparator:^NSComparisonResult(FeedModel* obj1, FeedModel* obj2) {
+        ReplyModel *r1 = obj1.replies[0];
+        ReplyModel *r2 = obj2.replies[0];
+        return r1.postedAt < r2.postedAt;
+    }];
     _start = _start + perCount;
     dispatch_async(dispatch_get_main_queue(), ^{
         [_tableView reloadData];
@@ -54,12 +59,12 @@ static NSString *cellIdentifier = @"BYTableViewCell";
     _tableView.rowHeight = UITableViewAutomaticDimension;
     __weak __typeof(self) weakself= self;
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        __weak __typeof(weakself) strongself= weakself;
+        __strong __typeof(weakself) strongself= weakself;
         [strongself clearData];
         [strongself fetchData];
     }];
     _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        __weak __typeof(weakself) strongself= weakself;
+        __strong __typeof(weakself) strongself= weakself;
         [strongself fetchData];
     }];
 }

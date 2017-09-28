@@ -11,9 +11,9 @@
 
 @interface ReplyModel : JSONModel
 @property (nonatomic) NSString *id;
-@property (nonatomic) NSString <Optional> *articleId;
+@property (nonatomic) NSString *articleId;
 @property (nonatomic) double postedAt;
 @property (nonatomic) NSString *userLabel;
 @property (nonatomic) NSString *content;
-@property (nonatomic) NSString <Optional> *userAvatar;
+@property (nonatomic) NSString *userAvatar;
 @end

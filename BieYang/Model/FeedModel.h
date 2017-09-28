@@ -14,12 +14,12 @@
 
 @interface FeedModel : JSONModel
 @property (nonatomic) NSString *id;
-@property (nonatomic) NSString <Optional> *articleId;
+@property (nonatomic) NSString *articleId;
 @property (nonatomic) double postedAt;
 @property (nonatomic) NSString *userLabel;
-@property (nonatomic) NSString <Optional> *userAvatar;
+@property (nonatomic) NSString *userAvatar;
 @property (nonatomic) NSString *content;
-@property (nonatomic) NSString <Optional> *articleTitle;
-@property (nonatomic) NSString <Optional> *productTitle;
+@property (nonatomic) NSString *articleTitle;
+@property (nonatomic) NSString *productTitle;
 @property (nonatomic) NSArray<ReplyModel> *replies;
 @end

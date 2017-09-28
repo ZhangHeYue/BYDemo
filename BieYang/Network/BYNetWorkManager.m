@@ -22,39 +22,42 @@ static NSString *productUrl = @"https://5thave-dev.bybieyang.com/api/v1/product-
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"b85612b3-de4e-49ec-9238-ca8c0d3d6aab" forHTTPHeaderField:@"X-Session-Key"];
     [manager.requestSerializer setValue:@"48c85ab9-a7f5-4970-a310-f5c982fd9f4a" forHTTPHeaderField:@"X-Session-User"];
-    __block int count = 0;
+    
     __block ArticleModel *feed;
     __block ArticleModel *product;
     
-    [manager GET:feedUrl parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        feed = [[ArticleModel alloc]initWithDictionary:responseObject error:nil];
-        count = count + 1;
-        if (count == 2) {
-            [self sortResultFeed:feed products:product completionHandler:completionHandler];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"失败 === %@",error);
-    }];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_queue_t dispatchQueue = dispatch_queue_create("zhy.network", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t dispatchGroup = dispatch_group_create();
     
-    [manager GET:productUrl parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        product = [[ArticleModel alloc]initWithDictionary:responseObject error:nil];
-        count = count + 1;
-        if (count == 2) {
-            [self sortResultFeed:feed products:product completionHandler:completionHandler];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"失败 === %@",error);
-    }];
+    dispatch_group_async(dispatchGroup, dispatchQueue, ^(){
+        [manager GET:feedUrl parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            feed = [[ArticleModel alloc]initWithDictionary:responseObject error:nil];
+            dispatch_semaphore_signal(semaphore);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"失败 === %@",error);
+            dispatch_semaphore_signal(semaphore);
+        }];
+    });
+    dispatch_group_async(dispatchGroup, dispatchQueue, ^(){
+        [manager GET:productUrl parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            product = [[ArticleModel alloc]initWithDictionary:responseObject error:nil];
+            dispatch_semaphore_signal(semaphore);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"失败 === %@",error);
+            dispatch_semaphore_signal(semaphore);
+        }];
+    });
+    dispatch_group_notify(dispatchGroup, dispatchQueue, ^(){
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        [self sortResultFeed:feed products:product completionHandler:completionHandler];
+    });
 }
 
 +(void)sortResultFeed:(ArticleModel*)feed products: (ArticleModel*)product completionHandler:(void (^)(NSArray<FeedModel*>*))completionHandler {
     NSArray<FeedModel*> *result = [feed.feeds arrayByAddingObjectsFromArray:product.feeds];
-    NSArray<FeedModel*> *sortResult = [result sortedArrayUsingComparator:^NSComparisonResult(FeedModel* obj1, FeedModel* obj2) {
-        ReplyModel *r1 = obj1.replies[0];
-        ReplyModel *r2 = obj2.replies[0];
-        return r1.postedAt < r2.postedAt;
-    }];
-    completionHandler(sortResult);
+    completionHandler(result);
 }
 
 @end
